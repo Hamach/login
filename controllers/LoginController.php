@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Core\Database\DB;
+use App\Core\Auth;
 
 class LoginController
 {
@@ -22,7 +23,7 @@ class LoginController
             return view('login', ['errors' => $errors]);
         }
 
-       login([
+       Auth::login([
            'login' => $user[0],
            'email' => $user[1]
        ]);
@@ -32,7 +33,7 @@ class LoginController
 
     public function logout()
     {
-        unset($_SESSION['user']);
-        return redirect('');
+        Auth::logout();
+        return redirect('login');
     }
 }

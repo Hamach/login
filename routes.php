@@ -7,4 +7,4 @@ $router->post('signIn', 'RegisterController@store');
 
 $router->get('login', 'LoginController@index');
 $router->post('login', 'LoginController@login');
-// $router->get('logout', 'LoginController@logout');
+$router->get('logout', 'LoginController@logout');

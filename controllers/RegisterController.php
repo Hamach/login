@@ -4,15 +4,9 @@ namespace App\Controllers;
 
 use models\User;
 use App\Core\Validator;
-use App\Middleware\AuthMiddleware;
 
 class RegisterController
 {
-    public function __construct()
-    {
-        AuthMiddleware::auth();
-    }
-
     public function index()
     {
         return  view('signin');

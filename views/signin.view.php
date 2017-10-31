@@ -31,3 +31,5 @@ require 'layout.view.php';
     </p>
 
 </form>
+
+<a href="/login">Login</a>

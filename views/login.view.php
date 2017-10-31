@@ -23,3 +23,5 @@ require "layout.view.php";
     </p>
 
 </form>
+
+<a href="/signIn">Sign In</a>

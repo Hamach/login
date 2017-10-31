@@ -1,5 +1,5 @@
 <div>
-    <p>Hello!</p>
+    <p>Hello <?= $user['login'] ?>!</p>
     <a href="/logout">Logout</a>
 </div>
 

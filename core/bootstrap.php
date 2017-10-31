@@ -30,8 +30,3 @@ function redirect($path)
 {
     header('Location: /' . $path);
 }
-
-function login($user)
-{
-    $_SESSION['user'] = $user;
-}

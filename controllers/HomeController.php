@@ -2,11 +2,19 @@
 
 namespace App\Controllers;
 
+use App\Core\Auth;
+use App\Middleware\AuthMiddleware;
 
 class HomeController
 {
+    public function __construct()
+    {
+        AuthMiddleware::auth();
+    }
+
     public function index()
     {
-        return view('dashboard');
+        $user = Auth::user();
+        return view('dashboard', ['user' => $user]);
     }
 }
